@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Grid, Card, CardMedia, CardContent, Typography, Modal, Box } from '@mui/material';
+import { Grid, Card, CardContent, Typography, Modal, Box } from '@mui/material';
+import Image from 'next/image';
 
 const ImageModal = ({ imageData, modalDescription }) => {
   const [open, setOpen] = useState(false);
@@ -30,11 +31,12 @@ const ImageModal = ({ imageData, modalDescription }) => {
               }}
               onClick={() => handleOpen(image)}
             >
-              <CardMedia
-                component="img"
-                height="160"
-                image={image.src}
+              <Image
+                src={image.src}
                 alt={image.title}
+                width={345} // Adjust the width as needed
+                height={160} // Adjust the height as needed
+                layout="responsive"
               />
               <CardContent sx={{
                 display: 'flex',
@@ -72,7 +74,13 @@ const ImageModal = ({ imageData, modalDescription }) => {
           <Typography id="modal-modal-description" sx={{ mt: 2 }}>
             {modalDescription === "default" ? selectedImage.description : selectedImage.answer}
           </Typography>
-          <img src={selectedImage.src} alt={selectedImage.title} style={{ width: '100%', marginTop: '20px' }} />
+          <Image
+            src={selectedImage.src}
+            alt={selectedImage.title}
+            width={400}
+            height={300}
+            layout="responsive"
+          />
         </Box>
       </Modal>
     </>
