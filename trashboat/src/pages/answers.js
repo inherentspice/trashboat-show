@@ -72,7 +72,7 @@ export default function Home() {
             {selectedImage.title}
           </Typography>
           <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-            {selectedImage.description}
+            {selectedImage.answer}
           </Typography>
           <img src={selectedImage.src} alt={selectedImage.title} style={{ width: '100%', marginTop: '20px' }} />
         </Box>

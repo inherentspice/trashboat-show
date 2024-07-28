@@ -64,10 +64,10 @@ const Navbar = () => {
                   </ListItemButton>
                 </ListItem>
               </Link>
-              <Link href="/quizzes" passHref>
+              <Link href="/answers" passHref>
                 <ListItem disablePadding>
                   <ListItemButton>
-                    <ListItemText primary="Quizzes" />
+                    <ListItemText primary="Answers" />
                   </ListItemButton>
                 </ListItem>
               </Link>
