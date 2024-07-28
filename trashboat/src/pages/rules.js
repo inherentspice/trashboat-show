@@ -23,8 +23,8 @@ const Rules = () => {
 
         <Typography variant="body1" sx={{ marginBottom: 2 }}>
         Welcome to Trashboat, a chaotic gameshow with terrible prizes. Today the game is simple: subjective trivia.
-        All the questions are subjective. That means they're almost impossible to get correct.
-        I don't know why I'm writing this out. It's all in the name.
+        All the questions are subjective. That means they&apos;re almost impossible to get correct.
+        I don&apos;t know why I&apos;m writing this out. It&apos;s all in the name.
         <DefinitionBox
           term="Subjective"
           definition="based on or influenced by personal feelings, tastes, or opinions."
@@ -33,7 +33,7 @@ const Rules = () => {
           term="Trivia"
           definition="of little value or importance"
         />
-        It's all in the name. All obvious, but here goes anywhere.
+        It&apos;s all in the name. All obvious, but here goes anywhere.
         </Typography>
         <List sx={{ backgroundColor: '#f9f9f9', borderRadius: '4px' }}>
           {rulesData.map((rule, index) => (
