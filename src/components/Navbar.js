@@ -25,21 +25,19 @@ const Navbar = () => {
 
     return (
         <Box sx={{ flexGrow: 1 }}>
-            <AppBar position="static" sx={{ backgroundColor: theme.palette.background.default }}>
+            <AppBar position="static" className="bg-primary">
                 <Toolbar>
                     <IconButton
                         size="large"
                         edge="start"
-                        color="inherit"
+                        color="black"
                         aria-label="menu"
                         sx={{ mr: 2 }}
                         onClick={handleToggleDrawer}
                     >
                         <MenuIcon />
                     </IconButton>
-                    <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                        Trashgoat
-                    </Typography>
+                    <p className="text-black text-xl">Trashgoat</p>
                 </Toolbar>
             </AppBar>
             <Drawer
