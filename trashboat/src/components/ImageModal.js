@@ -85,7 +85,7 @@ const ImageModal = ({ imageData, modalDescription }) => {
           <Typography id="modal-modal-title" variant="h6" component="h2">
             {selectedImage.title}
           </Typography>
-          <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+          <Typography id="modal-modal-description" sx={{ mt: 2, mb: 2 }}>
             {modalDescription === "default" ? selectedImage.description : selectedImage.answer}
           </Typography>
           <Image

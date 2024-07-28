@@ -11,7 +11,7 @@ const imageList = [
   "/Oxytntanyl.png",
   "/Groggin.png",
   "/Escaped.png",
-  "/Trashboat.png",
+  "/TrashboatAd.png",
 ];
 
 const Contact = () => {
@@ -105,7 +105,7 @@ const Contact = () => {
             <Image
               src={selectedImage}
               alt="Advertisement from our sponsors"
-              width={400}
+              width={370}
               height={300}
               layout="responsive"
             />
