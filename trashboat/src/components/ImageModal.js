@@ -64,7 +64,7 @@ const ImageModal = ({ imageData, modalDescription }) => {
           top: '50%',
           left: '50%',
           transform: 'translate(-50%, -50%)',
-          width: 400,
+          width: 370,
           bgcolor: 'background.paper',
           boxShadow: 24,
           p: 4,
@@ -91,7 +91,7 @@ const ImageModal = ({ imageData, modalDescription }) => {
           <Image
             src={selectedImage.src}
             alt={selectedImage.title}
-            width={400}
+            width={370}
             height={300}
             layout="responsive"
           />
