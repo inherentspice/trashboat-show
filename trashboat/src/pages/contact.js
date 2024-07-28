@@ -1,17 +1,17 @@
-import React, { useState } from 'react';
-import { Box, Container, TextField, Button, Modal, Typography, IconButton } from '@mui/material';
-import CloseIcon from '@mui/icons-material/Close';
-import Image from 'next/image';
-import Layout from '../app/layout';
+import React, { useState } from "react";
+import { Box, Container, TextField, Button, Modal, Typography, IconButton } from "@mui/material";
+import CloseIcon from "@mui/icons-material/Close";
+import Image from "next/image";
+import Layout from "../app/layout";
 
 const imageList = [
-  '/Vape.png',
-  '/Phone.png',
-  '/Jorts.png',
-  '/Oxytntanyl.png',
-  '/Groggin.png',
-  '/Escaped.png',
-  '/Trashboat.png',
+  "/Vape.png",
+  "/Phone.png",
+  "/Jorts.png",
+  "/Oxytntanyl.png",
+  "/Groggin.png",
+  "/Escaped.png",
+  "/Trashboat.png",
 ];
 
 const Contact = () => {
@@ -77,12 +77,12 @@ const Contact = () => {
           aria-describedby="image-description"
         >
           <Box sx={{
-            position: 'absolute',
-            top: '50%',
-            left: '50%',
-            transform: 'translate(-50%, -50%)',
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
             width: 400,
-            bgcolor: 'background.paper',
+            bgcolor: "background.paper",
             boxShadow: 24,
             p: 2,
             outline: 0
@@ -91,7 +91,7 @@ const Contact = () => {
               aria-label="close"
               onClick={handleClose}
               sx={{
-                position: 'absolute',
+                position: "absolute",
                 right: 8,
                 top: 8,
                 color: (theme) => theme.palette.grey[500]
@@ -100,7 +100,7 @@ const Contact = () => {
               <CloseIcon />
             </IconButton>
             <Typography id="modal-title" variant="h6" component="h2" sx={{ mb: 2, mt: 3 }}>
-              Oops! You've hit a technical issue! Relax with a word from our sponsors.
+              Oops! You&apos;ve hit a technical issue! Relax with a word from our sponsors.
             </Typography>
             <Image
               src={selectedImage}
