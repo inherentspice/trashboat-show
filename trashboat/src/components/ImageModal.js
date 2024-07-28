@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Grid, Card, CardContent, Typography, Modal, Box } from '@mui/material';
+import { Grid, Card, CardContent, Typography, Modal, Box, IconButton } from '@mui/material';
+import CloseIcon from '@mui/icons-material/Close';
 import Image from 'next/image';
 
 const ImageModal = ({ imageData, modalDescription }) => {
@@ -34,8 +35,8 @@ const ImageModal = ({ imageData, modalDescription }) => {
               <Image
                 src={image.src}
                 alt={image.title}
-                width={345} // Adjust the width as needed
-                height={160} // Adjust the height as needed
+                width={345}
+                height={160}
                 layout="responsive"
               />
               <CardContent sx={{
@@ -67,7 +68,20 @@ const ImageModal = ({ imageData, modalDescription }) => {
           bgcolor: 'background.paper',
           boxShadow: 24,
           p: 4,
+          outline: 0
         }}>
+          <IconButton
+            aria-label="close"
+            onClick={handleClose}
+            sx={{
+              position: 'absolute',
+              right: 8,
+              top: 8,
+              color: (theme) => theme.palette.grey[500]
+            }}
+          >
+            <CloseIcon />
+          </IconButton>
           <Typography id="modal-modal-title" variant="h6" component="h2">
             {selectedImage.title}
           </Typography>
