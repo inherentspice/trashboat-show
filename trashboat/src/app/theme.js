@@ -23,7 +23,7 @@ const theme = createTheme({
     },
     info: {
       main: '#81D4FA'  // Soft light blue
-    }
+    },
   },
 });
 
