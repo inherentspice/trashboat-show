@@ -1,8 +1,9 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import { ThemeProvider, CssBaseline } from '@mui/material';
-import theme from '../app/theme';
-import '../app/globals.css';
+
+import theme from '@/app/theme';
+import '@/app/globals.css';
 
 function MyApp({ Component, pageProps }) {
     return (
