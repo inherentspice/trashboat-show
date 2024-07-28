@@ -11,8 +11,8 @@ const Footer = () => {
       justifyContent: 'space-between',
       alignItems: 'center',
       padding: '20px',
-      borderTop: '1px solid #ccc', // Light border for the footer top
-      mt: 'auto' // Push footer to the bottom of the layout if possible
+      borderTop: '1px solid #ccc',
+      mt: 'auto'
     }}>
       <Typography variant="body2" color="text.secondary">
         © 2024 Trashboat Comedy Collective

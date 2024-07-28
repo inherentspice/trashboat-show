@@ -33,7 +33,7 @@ const Rules = () => {
           term="Trivia"
           definition="of little value or importance"
         />
-        It&apos;s all in the name. All obvious, but here goes anywhere.
+        It&apos;s all in the name. All obvious, but here goes anyway.
         </Typography>
         <List sx={{ backgroundColor: '#f9f9f9', borderRadius: '4px' }}>
           {rulesData.map((rule, index) => (
