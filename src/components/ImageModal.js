@@ -24,6 +24,8 @@ const ImageModal = ({ imageData, modalDescription }) => {
                         <div id="photo-card" className="h-[400px] border w-[325px] rounded-md">
                             <div
                                 id="overlay-container"
+                                role="button"
+                                onClick={() => handleOpen(image)}
                                 className="bg-white bg-opacity-[60%] h-full relative flex items-center rounded-md"
                             >
                                 <div
@@ -36,8 +38,6 @@ const ImageModal = ({ imageData, modalDescription }) => {
                                 <div
                                     id="white-bottom-banner"
                                     className="absolute bottom-0 w-full flex justify-center p-2"
-                                    role="button"
-                                    onClick={() => handleOpen(image)}
                                 >
                                     <p className="text-black text-xl hover:underline text-center">{image.title}</p>
                                 </div>
