@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { Grid, Card, CardContent, Typography, Modal, Box, IconButton } from '@mui/material';
+import { Grid, Box, Typography, Modal, IconButton } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
+import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import Image from 'next/image';
 
 const ImageModal = ({ imageData, modalDescription }) => {
@@ -20,29 +21,68 @@ const ImageModal = ({ imageData, modalDescription }) => {
         <>
             <Grid container spacing={2} className="py-10">
                 {imageData.map((image) => (
-                    <Grid item xs={12} sm={4} key={image.id} sx={{ display: 'flex', justifyContent: 'center' }}>
-                        <div id="photo-card" className="h-auto md:h-[400px] border w-[325px] rounded-md">
-                            <div
-                                id="overlay-container"
-                                role="button"
-                                onClick={() => handleOpen(image)}
-                                className="bg-white bg-opacity-[60%] h-full relative flex items-center rounded-md"
+                    <Grid
+                        item
+                        xs={12}
+                        sm={4}
+                        key={image.id}
+                        onClick={() => handleOpen(image)}
+                        sx={{ display: 'flex', justifyContent: 'center', cursor: 'pointer' }}
+                    >
+                        <Box
+                            sx={{
+                                width: 325,
+                                height: 'auto',
+                                overflow: 'hidden',
+                                borderRadius: '8px',
+                                boxShadow: '0 4px 12px rgba(0,0,0,0.3)',
+                                position: 'relative',
+                                '&:hover': {
+                                    boxShadow: '0 8px 24px rgba(0,0,0,0.5)',
+                                },
+                            }}
+                        >
+                            <Image
+                                src={image.src}
+                                alt={image.title}
+                                width={325}
+                                height={400}
+                                layout="responsive"
+                                objectFit="cover"
+                            />
+                            <Box
+                                sx={{
+                                    p: 1,
+                                    position: 'absolute',
+                                    bottom: 0,
+                                    width: '100%',
+                                    textAlign: 'center',
+                                    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+                                    color: 'white',
+                                }}
                             >
-                                <div
-                                    id="photo-container"
-                                    className="w-full h-full flex justify-center cursor-pointer"
-                                    style={{ paddingBottom: '40px' }}
-                                >
-                                    <img src={image.src} className="object-contain max-h-full" />
-                                </div>
-                                <div
-                                    id="white-bottom-banner"
-                                    className="absolute bottom-0 w-full flex justify-center p-2"
-                                >
-                                    <p className="text-black text-xl hover:underline text-center">{image.title}</p>
-                                </div>
-                            </div>
-                        </div>
+                                <Typography variant="subtitle1">{image.title}</Typography>
+                            </Box>
+                            <IconButton
+                                aria-label="view details"
+                                onClick={(e) => {
+                                    e.stopPropagation();
+                                    handleOpen(image);
+                                }}
+                                sx={{
+                                    position: 'absolute',
+                                    bottom: 8,
+                                    right: 8,
+                                    color: 'black',
+                                    backgroundColor: 'rgba(255, 255, 255, 0.7)',
+                                    '&:hover': {
+                                        backgroundColor: 'rgba(255, 255, 255, 0.9)',
+                                    },
+                                }}
+                            >
+                                <OpenInNewIcon />
+                            </IconButton>
+                        </Box>
                     </Grid>
                 ))}
             </Grid>
