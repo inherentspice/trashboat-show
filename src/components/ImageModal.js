@@ -20,8 +20,8 @@ const ImageModal = ({ imageData, modalDescription }) => {
         <>
             <Grid container spacing={2} className="py-10">
                 {imageData.map((image) => (
-                    <Grid item xs={12} sm={4} key={image.id}>
-                        <div id="photo-card" className="h-[400px] border w-[325px] rounded-md">
+                    <Grid item xs={12} sm={4} key={image.id} sx={{ display: 'flex', justifyContent: 'center' }}>
+                        <div id="photo-card" className="h-auto md:h-[400px] border w-[325px] rounded-md">
                             <div
                                 id="overlay-container"
                                 role="button"
