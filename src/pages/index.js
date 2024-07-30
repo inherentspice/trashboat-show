@@ -8,21 +8,6 @@ import Layout from '@/app/layout';
 export default function Index() {
     return (
         <Layout>
-            <style>
-                {`
-                @keyframes pulse {
-                    0% {
-                        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.5);
-                    }
-                    50% {
-                        box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
-                    }
-                    100% {
-                        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-                    }
-                }
-            `}
-            </style>
             <Box
                 sx={{
                     display: 'flex',
@@ -41,6 +26,7 @@ export default function Index() {
                 <Link href="/home" passHref>
                     <Button sx={{ p: 0, minWidth: 'auto', marginTop: 2 }}>
                         <Box
+                            className="pulse-effect"
                             sx={{
                                 mt: 2,
                                 borderRadius: '50%',
@@ -49,7 +35,6 @@ export default function Index() {
                                 height: 300,
                                 cursor: 'pointer',
                                 display: 'flex',
-                                animation: 'pulse 2s infinite',
                             }}
                         >
                             <Image
