@@ -8,15 +8,7 @@ import Layout from '@/app/layout';
 export default function Index() {
     return (
         <Layout>
-            <Box
-                sx={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    height: '100vh',
-                }}
-            >
+            <Box className="centered-flex-box">
                 <Typography variant="h2" component="h1" gutterBottom>
                     Trashboat
                 </Typography>
@@ -24,19 +16,8 @@ export default function Index() {
                     the world's worst gameshow
                 </Typography>
                 <Link href="/home" passHref>
-                    <Button sx={{ p: 0, minWidth: 'auto', marginTop: 2 }}>
-                        <Box
-                            className="pulse-effect"
-                            sx={{
-                                mt: 2,
-                                borderRadius: '50%',
-                                overflow: 'hidden',
-                                width: 300,
-                                height: 300,
-                                cursor: 'pointer',
-                                display: 'flex',
-                            }}
-                        >
+                    <Button className="image-button">
+                        <Box className="image-container pulse-effect">
                             <Image
                                 src="/trashboat.png"
                                 alt="Burning boat at sea"
@@ -48,7 +29,7 @@ export default function Index() {
                         </Box>
                     </Button>
                 </Link>
-                <Typography variant="caption" sx={{ mt: 1 }}>
+                <Typography variant="caption" className="image-caption">
                     Tap the image to enter
                 </Typography>
             </Box>
