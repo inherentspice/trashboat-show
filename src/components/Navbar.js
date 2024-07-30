@@ -47,7 +47,7 @@ const Navbar = () => {
                 sx={{ '& .MuiDrawer-paper': { backgroundColor: theme.palette.background.default } }}
             >
                 <List>
-                    <Link href="/" passHref>
+                    <Link href="/home" passHref>
                         <ListItem disablePadding>
                             <ListItemButton>
                                 <ListItemText primary="Home" />
