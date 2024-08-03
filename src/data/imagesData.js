@@ -67,24 +67,6 @@ const imageData = [
         title: 'Animal Massage',
         description: 'If you had to choose an animal to be your personal masseuse, which one would it be and why?',
     },
-    {
-        id: 10,
-        src: '/images/image10.jpg',
-        title: 'Country Road',
-        description: 'A quiet country road lined with autumn trees.',
-    },
-    {
-        id: 11,
-        src: '/images/image11.jpg',
-        title: 'Northern Lights',
-        description: 'Spectacular view of the Northern Lights.',
-    },
-    {
-        id: 12,
-        src: '/images/image12.jpg',
-        title: 'Sunset Sailing',
-        description: 'Sailing into the sunset on a calm evening.',
-    },
 ];
 
 export default imageData;
