@@ -37,7 +37,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ## ToDo's
 
--   [ ] configure darkmode stylings
--   [ ] update footer theme color
--   [ ] image modal card size should be uniform
--   [ ] visual indicator for clicking into modal board on homepage
+-   [x] configure darkmode stylings
+-   [x] update footer theme color
+-   [x] image modal card size should be uniform
+-   [x] visual indicator for clicking into modal board on homepage
